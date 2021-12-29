@@ -8,6 +8,11 @@ function startAnim(){
     },500);
 
     setTimeout(function(){
+    document.getElementById("logo").style.transform = 'translateX(0px)';
+    document.getElementById("logo").style.transition = 'all 0.5s ease-out';
+    },1000);
+
+    setTimeout(function(){
     document.getElementById("text-1").style.transform = 'translateX(0px)';
     document.getElementById("text-1").style.transition = 'all 0.5s ease-out';
     },1500);

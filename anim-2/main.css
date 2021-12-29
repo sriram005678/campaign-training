@@ -59,6 +59,7 @@ body{
     left: 152px;
     width: 84px;
     height: auto;
+    transform: translateX(190px);
 }
 #text-1{
     position: absolute;
