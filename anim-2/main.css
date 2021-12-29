@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Girassol', cursive;
+    /* font-family: 'Goblin One', cursive; */
+    /* font-family: 'Slabo 13px', serif; */
+    /* font-family: 'Trirong', serif */
+}
+#container{
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    margin: 0 auto;
+}
+#border{
+    width: 300px;
+    height: 250px;
+    border: 1px solid #000;
+    z-index: 999;
+    opacity: 0.3;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 250px;
+}
+#topline, #bottomline{
+    position: absolute;
+    width: 0px;
+    height: 4px;
+    background-color: #88743f;
+}
+#topline{
+    top: 0;
+    left: 10px;
+}
+#bottomline{
+    bottom: 0;
+    right: 10px;
+}
+#logo{
+    position: absolute;
+    top: 16px;
+    left: 152px;
+    width: 84px;
+    height: auto;
+}
+#text-1{
+    position: absolute;
+    top: 48px;
+    right: 13px;
+    width: auto;
+    height: auto;
+    color: #88743f;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 20px;
+    transform: translateX(190px);
+    /* text-align: right; */
+}
+#text-2{
+    position: absolute;
+    top: 79px;
+    right: 13px;
+    width: auto;
+    height: auto;
+    color: #fff;
+    letter-spacing: 0px;
+    font-weight: 200;
+    font-size: 13px;
+    font-family: 'Slabo 13px', serif;
+    transform: translateX(190px);
+}
+#text-3{
+    position: absolute;
+    top: 108px;
+    right: 12px;
+    width: auto;
+    height: auto;
+    color: #fff;
+    letter-spacing: 0px;
+    font-weight: 200;
+    font-size: 11px;
+    /* font-family: 'Slabo 13px', serif; */
+    font-family: 'Trirong', serif;
+    line-height: 18px;
+    transform: translateY(190px);
+    
+}
+#cta{
+    position: absolute;
+    bottom: 63px;
+    right: 35px;
+    width: auto;
+    height: auto;
+    color: #fff;
+    letter-spacing: -1px;
+    font-weight: 200;
+    font-size: 14px;
+    /* font-family: 'Slabo 13px', serif; */
+    font-family: 'Trirong', serif;
+    background-color: #88743f;
+    border-radius: 8px;
+    padding: 1px 21px;
+    transform: translateX(190px);
+}
+#url{
+    position: absolute;
+    bottom: 7px;
+    right: 33px;
+    width: auto;
+    height: auto;
+    color: #fff;
+    letter-spacing: -1px;
+    font-weight: 200;
+    font-size: 12px;
+    font-family: 'Trirong', serif;
+    transform: translateX(190px);
+}
+
+.hide{
+    opacity: 0;
+}
