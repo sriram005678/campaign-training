@@ -59,7 +59,7 @@ body{
     left: 152px;
     width: 84px;
     height: auto;
-    transform: translateX(190px);
+    opacity: 0;
 }
 #text-1{
     position: absolute;
@@ -118,7 +118,7 @@ body{
     background-color: #88743f;
     border-radius: 8px;
     padding: 1px 21px;
-    transform: translateX(190px);
+    transform: translateX(-300px);
 }
 #url{
     position: absolute;
