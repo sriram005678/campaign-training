@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+#container{
+    position: relative;
+    width: 300px;
+    height: 600px;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0 auto;
+    /* background-color: #086b68; */
+}
+#border{
+    width: 300px;
+    height: 600px;
+    border: 1px solid #000;
+    opacity: 0.3;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+#image-1{
+    position: absolute;
+    /* left: 0; */
+    background-image: url(../task-5/images/imgRoad_300x600.jpg);
+    background: no-repeat;
+    background-position: center top;
+    width: 300px;
+    height: 600px;
+}
