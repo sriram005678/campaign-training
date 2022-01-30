@@ -1,38 +1,355 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-body{
-    padding: 0;
-    margin: 0;
+body {
+  padding: 0;
+  margin: 0;
 }
-#container{
-    position: relative;
-    width: 300px;
-    height: 600px;
-    overflow: hidden;
-    cursor: pointer;
-    margin: 0 auto;
-    /* background-color: #086b68; */
+#container {
+  position: relative;
+  width: 300px;
+  height: 600px;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 0 auto;
+  /* background-color: #086b68; */
 }
-#border{
-    width: 300px;
-    height: 600px;
-    border: 1px solid #000;
-    opacity: 0.3;
-    pointer-events: none;
+#border {
+  width: 300px;
+  height: 600px;
+  border: 1px solid #000;
+  opacity: 0.3;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* bottom: 0; */
+}
+
+#roadholder {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 4000px;
+  background-image: url(../task-5/images/imgRoad_300x600.jpg);
+  background-size: 325px;
+  background-repeat: repeat-y;
+  background-position-y: 1300px;
+  transform: translateY(-2400px);
+}
+#road {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 1300px;
+  /* transform: translateY(-700px); */
+}
+#car {
+  position: absolute;
+  left: 92px;
+  bottom: -94px;
+  width: 245px;
+  height: 217px;
+}
+#headtrack {
+  position: absolute;
+  left: 12px;
+  top: 198px;
+  width: 121px;
+  height: 120px;
+  border: solid 1px #fff;
+  transform: scale(0.3) translate(360px, 450px);
+  opacity: 0;
+}
+#headtrack1,
+#headtrack2,
+#headtrack3,
+#headtrack4 {
+  position: absolute;
+  left: 11px;
+  top: 11px;
+  width: 46px;
+  height: 48px;
+  overflow: hidden;
+}
+#headtrack1 {
+  background-image: url(../task-5/images/left_sprite.png);
+  background-repeat: no-repeat;
+  background-position: -12px -11px;
+}
+#headtrack2 {
+  left: 62px;
+  top: 11px;
+  background-image: url(../task-5/images/left_sprite.png);
+  background-repeat: no-repeat;
+  background-position: -305px -11px;
+}
+
+#headtrack3 {
+  left: 11px;
+  top: 66px;
+  background-image: url(../task-5/images/left_sprite.png);
+  background-repeat: no-repeat;
+  background-position: -133px -65px;
+}
+#headtrack4 {
+  left: 62px;
+  top: 65px;
+  background-image: url(../task-5/images/left_sprite.png);
+  background-repeat: no-repeat;
+  background-position: -426px -64px;
+}
+#tracker1,
+#tracker2 {
+  transform: scale(0);
+}
+/* #leftsprite1{
     position: absolute;
-    top: 0;
     left: 0;
-    bottom: 0;
+    top: 0;
+    opacity: 0;
+    
 }
-#image-1{
+#leftsprite2{
     position: absolute;
-    /* left: 0; */
-    background-image: url(../task-5/images/imgRoad_300x600.jpg);
-    background: no-repeat;
-    background-position: center top;
-    width: 300px;
-    height: 600px;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    
+} */
+#rightsign {
+  position: absolute;
+  right: -156px;
+  top: -106px;
+  width: 140px;
+  height: 160px;
+  border: solid 1px #fff;
+  overflow: hidden;
+  transform: scale(0.3) translate(-20px, 710px);
+  opacity: 0;
+}
+#rightcopy {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 140px;
+  height: auto;
+}
+#street {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 140px;
+  height: auto;
+}
+#streetholder {
+  position: absolute;
+  left: 52px;
+  bottom: 5px;
+  width: 40px;
+  height: 64px;
+  text-align: center;
+  overflow: hidden;
+}
+#deerholder {
+  position: absolute;
+  left: 5px;
+  top: 71px;
+  width: 60px;
+  height: 57px;
+  /* border: solid 1px #fff; */
+  /* overflow: hidden; */
+  transform: translate(10px, -25px) scale(0.5);
+  /* opacity: 0; */
+}
+#deerborder {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: solid 1px #fff;
+  opacity: 0;
+  transform: scale(1.3);
+}
+#deer {
+  transform: translate(5px, 4px);
+  width: 50px;
+  height: auto;
+}
+#joggerholder {
+  position: absolute;
+  right: 8px;
+  top: 48px;
+  width: 34px;
+  height: 88px;
+  transform: translate(-46px, -34px) scale(0);
+  /* opacity: 0; */
+}
+#jogger {
+  width: 36px;
+  height: auto;
+}
+#joggerholder:after {
+  position: absolute;
+  content: "";
+  left: 2px;
+  top: 18px;
+  width: 29px;
+  height: 42px;
+  border: solid 1px #fff;
+}
+#joggerholder:before {
+  position: absolute;
+  content: "";
+  left: 9px;
+  top: 1px;
+  width: 17px;
+  height: 17px;
+  border: solid 1px #fff;
+}
+#street_lines {
+  transform: translateY(-196px);
+}
+#dotted1 {
+  position: absolute;
+  left: 121px;
+  top: 315px;
+  width: 10px;
+  height: 128px;
+  transform: rotate(-30deg);
+  overflow: hidden;
+}
+#dotted2 {
+  position: absolute;
+  left: 236px;
+  top: 261px;
+  width: 10px;
+  height: 170px;
+  transform: rotate(15deg);
+  overflow: hidden;
+}
+.dottinner {
+  width: 100%;
+  height: 100%;
+  border: dotted 3px #fff;
+  border-bottom: 0;
+  border-right: 0;
+  border-top: 0;
+  transform: translateY(100%);
+}
+#word1 {
+  position: absolute;
+  left: 1px;
+  top: 2px;
+  width: 900px;
+  height: 600px;
+  opacity: 0;
+}
+#word2 {
+  position: absolute;
+  left: -304px;
+  top: 2px;
+  width: 900px;
+  height: 600px;
+  opacity: 0;
+}
+#word3 {
+  position: absolute;
+  left: 1px;
+  top: 2px;
+  width: 900px;
+  height: 600px;
+  opacity: 0;
+}
+#word4 {
+  position: absolute;
+  left: -300px;
+  top: 2px;
+  width: 900px;
+  height: 600px;
+  opacity: 0;
+}
+#word5 {
+  position: absolute;
+  left: -599px;
+  top: 2px;
+  width: 900px;
+  height: 600px;
+  opacity: 0;
+}
+#word6 {
+  position: absolute;
+  left: -600px;
+  top: 2px;
+  width: 900px;
+  height: 600px;
+  opacity: 0;
+}
+#word7 {
+  position: absolute;
+  left: 3px;
+  top: 2px;
+  width: 900px;
+  height: 600px;
+  opacity: 0;
+}
+#imageFront {
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  width: 300px;
+  height: 600px;
+  transform: translateY(-598px);
+}
+#imageFront1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+#imageFront2 {
+  position: absolute;
+  left: -310px;
+  top: 2px;
+  width: 900px;
+  height: 600px;
+  opacity: 0;
+}
+#imageFront3 {
+  position: absolute;
+  left: -610px;
+  top: 2px;
+  width: 900px;
+  height: 600px;
+  opacity: 0;
+}
+#imageFront4 {
+  position: absolute;
+  left: -10px;
+  top: 2px;
+  width: 900px;
+  height: 600px;
+  opacity: 0;
+}
+#imageFront5 {
+  position: absolute;
+  left: -311px;
+  top: 2px;
+  width: 900px;
+  height: 600px;
+  opacity: 0;
+}
+#imageFront6 {
+  position: absolute;
+  left: -610px;
+  top: 2px;
+  width: 900px;
+  height: 600px;
+  opacity: 0;
 }
